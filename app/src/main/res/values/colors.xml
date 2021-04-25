@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="nyanza">#f4fdd9</color>
-    <color name="nyanzaLight">#ffffff</color>
-    <color name="nyanzaDark">#c1caa7</color>
+    <color name="mintCream">#f2f9f3</color>
+    <color name="mintLight">#ffffff</color>
+    <color name="mintDark">#bfc6c0</color>
     <color name="cadet">#4f6d7a</color>
     <color name="cadetLight">#7c9ba9</color>
     <color name="cadetDark">#24424e</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="gray">#bbbbbb</color>
 </resources>
