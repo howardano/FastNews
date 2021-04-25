@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277687963958",
+    "project_id": "fastnews-b493e",
+    "storage_bucket": "fastnews-b493e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277687963958:android:2dae297a513d763d916397",
+        "android_client_info": {
+          "package_name": "ru.mail.park.fastnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277687963958-d59igi8q8ohv0s7ihamjh04rcltpmb37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzSu0aP4JLeyWXHWiDaXYkbxUEpQV0JbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277687963958-d59igi8q8ohv0s7ihamjh04rcltpmb37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
