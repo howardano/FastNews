@@ -56,21 +56,21 @@ public class LogInActivity extends AppCompatActivity {
                     passwordId.setError("Please, enter your password");
                     passwordId.requestFocus();
                 } else if (email.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(LogInActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT);
+                    Toast.makeText(LogInActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT).show();
                 } else if (!(email.isEmpty() && password.isEmpty())) {
-                    Toast.makeText(LogInActivity.this, "You are here", Toast.LENGTH_SHORT);
                     mFirebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(LogInActivity.this, "Login Error Occured. Please, Try Again", Toast.LENGTH_SHORT);
+                                Toast.makeText(LogInActivity.this, "Login Error Occured. You are not registered", Toast.LENGTH_SHORT).show();
                             } else {
                                 startActivity(new Intent(LogInActivity.this, HomeActivity.class));
+                                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new home()).commit();
                             }
                         }
                     });
                 } else {
-                    Toast.makeText(LogInActivity.this, "Error Occured", Toast.LENGTH_SHORT);
+                    Toast.makeText(LogInActivity.this, "Error Occured", Toast.LENGTH_SHORT).show();
                 }
             }
         });
