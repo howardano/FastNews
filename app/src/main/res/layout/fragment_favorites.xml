@@ -11,6 +11,6 @@
         android:layout_height="match_parent"
         android:textSize="30sp"
         android:gravity="center"
-        android:text="@string/home_fragment" />
+        android:text="@string/favorites_fragment" />
 
 </FrameLayout>

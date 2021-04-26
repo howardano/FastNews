@@ -11,6 +11,24 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="30sp"
-        android:text="@string/favorites_fragment" />
+        android:text="@string/home_fragment"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+
+    </GridLayout>
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:id="@+id/recyclerView"
+        />
 
 </FrameLayout>

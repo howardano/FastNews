@@ -3,6 +3,7 @@ package ru.mail.park.fastnews;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     TextView name, mail;
     Button logout;
     BottomNavigationView btmNavView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,6 @@ public class HomeActivity extends AppCompatActivity {
 
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
                     return true;
                 }
             };
