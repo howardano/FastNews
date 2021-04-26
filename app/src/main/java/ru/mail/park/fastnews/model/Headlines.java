@@ -11,11 +11,11 @@ public class Headlines {
     @Expose
     private String status;
 
-    @SerializedName("status")
+    @SerializedName("results")
     @Expose
     private String totalResults;
 
-    @SerializedName("status")
+    @SerializedName("articles")
     @Expose
     private List<Articles> articles;
 
