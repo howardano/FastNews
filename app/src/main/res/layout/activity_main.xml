@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/firstAppereance"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mintCream"
@@ -52,65 +53,67 @@
 
     <ImageView
         android:id="@+id/googleButton"
-        android:layout_width="52dp"
-        android:layout_height="61dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="145dp"
+        android:background="?selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="@+id/account_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/account_bar"
-        app:srcCompat="@drawable/googlebutton"
-        android:background="?selectableItemBackgroundBorderless"/>
+        app:srcCompat="@drawable/googlebutton" />
 
     <ImageView
         android:id="@+id/facebookButton"
-        android:layout_width="52dp"
-        android:layout_height="61dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="145dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/account_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/account_bar"
-        app:srcCompat="@drawable/facebookbutton"
-        android:background="?selectableItemBackgroundBorderless"/>
+        app:srcCompat="@drawable/facebookbutton" />
 
     <ImageView
         android:id="@+id/twitterButton"
-        android:layout_width="52dp"
-        android:layout_height="61dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="145dp"
         android:layout_marginEnd="140dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/account_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/account_bar"
-        app:srcCompat="@drawable/twitterbutton"
-        android:background="?selectableItemBackgroundBorderless"/>
+        app:srcCompat="@drawable/twitterbutton" />
 
     <ImageView
         android:id="@+id/decorations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:background="?selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="@+id/account_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/account_bar"
-        app:srcCompat="@drawable/somebeauty"
-        android:background="?selectableItemBackgroundBorderless"/>
+        app:srcCompat="@drawable/somebeauty" />
 
     <ImageView
         android:id="@+id/loginbtn"
         android:layout_width="127dp"
         android:layout_height="37dp"
         android:layout_marginBottom="53dp"
+        android:background="?selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="@+id/account_bar"
         app:layout_constraintEnd_toEndOf="@+id/account_bar"
         app:layout_constraintStart_toStartOf="@+id/account_bar"
         app:layout_constraintTop_toTopOf="@+id/account_bar"
-        app:srcCompat="@drawable/loginbutton"
-        android:background="?selectableItemBackgroundBorderless"/>
+        app:srcCompat="@drawable/loginbutton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

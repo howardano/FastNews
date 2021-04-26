@@ -40,14 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
                     passwordId.setError("Please, enter your password");
                     passwordId.requestFocus();
                 } else if (email.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT);
+                    Toast.makeText(RegisterActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT).show();
                 } else if (!(email.isEmpty() && password.isEmpty())) {
-                    Toast.makeText(RegisterActivity.this, "You are here", Toast.LENGTH_SHORT);
+                    //Toast.makeText(RegisterActivity.this, "You are here", Toast.LENGTH_SHORT).show();
                     mFirebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(RegisterActivity.this, "Sign Up is not successfull. Please, try again", Toast.LENGTH_SHORT);
+                                Toast.makeText(RegisterActivity.this, "Sign Up is not successfull. Please, try again", Toast.LENGTH_SHORT).show();
                             } else {
                                 startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
                             }
