@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews;
+package ru.mail.park.fastnews.views;
 
 import android.os.Bundle;
 
@@ -18,8 +18,11 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import ru.mail.park.fastnews.model.Articles;
-import ru.mail.park.fastnews.model.Headlines;
+import ru.mail.park.fastnews.Adapter;
+import ru.mail.park.fastnews.ApiClient;
+import ru.mail.park.fastnews.Articles;
+import ru.mail.park.fastnews.Headlines;
+import ru.mail.park.fastnews.R;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -1,19 +1,17 @@
-package ru.mail.park.fastnews;
+package ru.mail.park.fastnews.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
+
+import ru.mail.park.fastnews.R;
 
 public class HomeActivity extends AppCompatActivity {
     TextView name, mail;
@@ -25,21 +23,21 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        logout = findViewById(R.id.signout);
-        name = findViewById(R.id.name);
-        mail = findViewById(R.id.email);
+//        logout = findViewById(R.id.signout);
+//        name = findViewById(R.id.name);
+ //       mail = findViewById(R.id.email);
         btmNavView = findViewById(R.id.bottom_menu);
         btmNavView.setOnNavigationItemSelectedListener(navListener);
 
 
-        logout.setOnClickListener(new View.OnClickListener() {
+ /*       logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {

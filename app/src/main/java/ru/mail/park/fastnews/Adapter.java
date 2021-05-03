@@ -1,7 +1,6 @@
 package ru.mail.park.fastnews;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import org.ocpsoft.prettytime.PrettyTime;
-import org.ocpsoft.prettytime.format.SimpleTimeFormat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
-import ru.mail.park.fastnews.model.Articles;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 

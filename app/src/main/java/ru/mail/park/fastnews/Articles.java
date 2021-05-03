@@ -1,10 +1,9 @@
-package ru.mail.park.fastnews.model;
+package ru.mail.park.fastnews;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Articles {
-
 
     @SerializedName("source")
     @Expose
