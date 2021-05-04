@@ -1,7 +1,6 @@
-package ru.mail.park.fastnews.models;
+package ru.mail.park.fastnews.model.googleapi.dump;
 
 import android.app.Application;
-import android.content.Intent;
 import android.os.Build;
 import android.widget.Toast;
 
@@ -15,15 +14,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import ru.mail.park.fastnews.views.HomeActivity;
-import ru.mail.park.fastnews.views.LogInActivity;
-
-public class AppRepository {
+public class AppAPI {
     private Application application;
     private FirebaseAuth firebaseAuth;
     private MutableLiveData<FirebaseUser> userMutableLiveData;
 
-    public AppRepository(Application application) {
+    public AppAPI(Application application) {
         this.application = application;
 
         firebaseAuth = FirebaseAuth.getInstance();

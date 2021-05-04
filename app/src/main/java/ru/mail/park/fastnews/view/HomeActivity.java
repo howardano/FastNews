@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews.views;
+package ru.mail.park.fastnews.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import ru.mail.park.fastnews.R;
+import ru.mail.park.fastnews.view.fragment.FavoritesFragment;
+import ru.mail.park.fastnews.view.fragment.HomeFragment;
+import ru.mail.park.fastnews.view.fragment.SettingsFragment;
 
 public class HomeActivity extends AppCompatActivity {
     TextView name, mail;
@@ -47,13 +50,13 @@ public class HomeActivity extends AppCompatActivity {
 
                     switch(item.getItemId()) {
                         case R.id.home_fr:
-                            selectedFragment = new home();
+                            selectedFragment = new HomeFragment();
                             break;
                         case R.id.favorites_fr:
-                            selectedFragment = new favorites();
+                            selectedFragment = new FavoritesFragment();
                             break;
                         case R.id.settings_fr:
-                            selectedFragment = new settings();
+                            selectedFragment = new SettingsFragment();
                             break;
 
                     }

@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews.views;
+package ru.mail.park.fastnews.view.fragment;
 
 import android.os.Bundle;
 
@@ -18,22 +18,21 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import ru.mail.park.fastnews.Adapter;
-import ru.mail.park.fastnews.ApiClient;
-import ru.mail.park.fastnews.Articles;
-import ru.mail.park.fastnews.Headlines;
+import ru.mail.park.fastnews.view.adapter.ArticleAdapter;
+import ru.mail.park.fastnews.model.newsapi.dump.ApiClient;
+import ru.mail.park.fastnews.model.entity.Article;
 import ru.mail.park.fastnews.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link home#newInstance} factory method to
+ * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class home extends Fragment {
+public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    Adapter adapter;
-    List<Articles> articles = new ArrayList<>();
+    ArticleAdapter articleAdapter;
+    List<Article> articles = new ArrayList<>();
     String API_KEY = "c8b5fa8a6f7b4ed3b8f84249ba133e80";
 
     // TODO: Rename parameter arguments, choose names that match
@@ -45,7 +44,7 @@ public class home extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public home() {
+    public HomeFragment() {
         // Required empty public constructor
     }
 
@@ -58,8 +57,8 @@ public class home extends Fragment {
      * @return A new instance of fragment home.
      */
     // TODO: Rename and change types and number of parameters
-    public static home newInstance(String param1, String param2) {
-        home fragment = new home();
+    public static HomeFragment newInstance(String param1, String param2) {
+        HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -78,20 +77,20 @@ public class home extends Fragment {
     }
 
     public void retrieveJson(String country, String apiKey) {
-        Call<Headlines> call = ApiClient.getInstance().getApi().getHeadlines(country, apiKey);
-        call.enqueue(new Callback<Headlines>() {
+        Call<Headline> call = ApiClient.getInstance().getApi().getHeadlines(country, apiKey);
+        call.enqueue(new Callback<Headline>() {
             @Override
-            public void onResponse(Call<Headlines> call, Response<Headlines> response) {
+            public void onResponse(Call<Headline> call, Response<Headline> response) {
                 if (response.isSuccessful() && response.body().getArticles() != null) {
                     articles.clear();
                     articles = response.body().getArticles();
-                    adapter = new Adapter(getContext(), articles);
-                    recyclerView.setAdapter(adapter);
+                    articleAdapter = new ArticleAdapter(getContext(), articles);
+                    recyclerView.setAdapter(articleAdapter);
                 }
             }
 
             @Override
-            public void onFailure(Call<Headlines> call, Throwable t) {
+            public void onFailure(Call<Headline> call, Throwable t) {
                 Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });

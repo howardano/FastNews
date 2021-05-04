@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews;
+package ru.mail.park.fastnews.view.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -21,13 +21,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+import ru.mail.park.fastnews.R;
+import ru.mail.park.fastnews.model.entity.Article;
+
+public class final ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder> {
 
     Context context;
-    List<Articles> articles;
+    List<Article> articles;
 
 
-    public Adapter(Context context, List<Articles> articles) {
+    public ArticleAdapter(Context context, List<Article> articles) {
         this.context = context;
         this.articles = articles;
     }
@@ -41,7 +44,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        Articles a = articles.get(position);
+        Article a = articles.get(position);
         holder.tvTitle.setText(a.getTitle());
         holder.tvSource.setText(a.getSource().getName());
         holder.tvDate.setText(a.getPublishedAt());

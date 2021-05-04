@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews.views;
+package ru.mail.park.fastnews.view;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -23,37 +23,35 @@ import com.google.firebase.auth.FirebaseUser;
 import ru.mail.park.fastnews.R;
 import ru.mail.park.fastnews.viewmodel.LoginRegisterViewModel;
 
-import static java.security.AccessController.getContext;
-
-public class RegisterActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
     private EditText emailId, passwordId;
-    private Button btnCreateAcc;
+    private Button btnLogIn;
     private LoginRegisterViewModel loginRegisterViewModel;
     FirebaseAuth mFirebaseAuth;
 
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_log_in);
+        emailId = findViewById(R.id.EmailAddress);
+        passwordId = findViewById(R.id.password);
+        btnLogIn = findViewById(R.id.logInButton);
         loginRegisterViewModel = ViewModelProviders.of(this).get(LoginRegisterViewModel.class);
         loginRegisterViewModel.getUserMutableLiveData().observe(this, new Observer<FirebaseUser>() {
 
             @Override
             public void onChanged(FirebaseUser firebaseUser) {
                 if (firebaseUser != null) {
-                    Toast.makeText(RegisterActivity.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
+                    Toast.makeText(LogInActivity.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LogInActivity.this, HomeActivity.class));
                 }
                 else {
-                    Toast.makeText(RegisterActivity.this, "Please, log in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivity.this, "Please, log in", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        emailId = findViewById(R.id.EmailAddress);
-        passwordId = findViewById(R.id.password);
-        btnCreateAcc = findViewById(R.id.newAccountButton);
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        btnCreateAcc.setOnClickListener(new View.OnClickListener(){
+        btnLogIn.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.P)
             @Override
             public void onClick(View v) {
@@ -66,14 +64,13 @@ public class RegisterActivity extends AppCompatActivity {
                     passwordId.setError("Please, enter your password");
                     passwordId.requestFocus();
                 } else if (email.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivity.this, "Fields Are Empty", Toast.LENGTH_SHORT).show();
                 } else if (!(email.isEmpty() && password.isEmpty())) {
-                    loginRegisterViewModel.register(email, password);
+                    loginRegisterViewModel.login(email, password);
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Error Occured", Toast.LENGTH_SHORT);
+                    Toast.makeText(LogInActivity.this, "Error Occured", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
 }
