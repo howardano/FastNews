@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews.models;
+package ru.mail.park.fastnews.repositories;
 
 import android.app.Application;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

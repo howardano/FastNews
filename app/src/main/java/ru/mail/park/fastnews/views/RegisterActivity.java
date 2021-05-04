@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText emailId, passwordId;
     private Button btnCreateAcc;
     private LoginRegisterViewModel loginRegisterViewModel;
-    FirebaseAuth mFirebaseAuth;
+    //FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         emailId = findViewById(R.id.EmailAddress);
         passwordId = findViewById(R.id.password);
         btnCreateAcc = findViewById(R.id.newAccountButton);
-        mFirebaseAuth = FirebaseAuth.getInstance();
+        //mFirebaseAuth = FirebaseAuth.getInstance();
         btnCreateAcc.setOnClickListener(new View.OnClickListener(){
             @RequiresApi(api = Build.VERSION_CODES.P)
             @Override

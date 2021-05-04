@@ -26,12 +26,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import ru.mail.park.fastnews.R;
-import ru.mail.park.fastnews.viewmodel.GoogleLoginViewModel;
+
 public class MainActivity extends AppCompatActivity {
     Button btnCreateAcc;
     ImageView btnlogIn, googlebtn;
     private GoogleSignInClient mGoogleSignInClient;
-    GoogleLoginViewModel googleLoginViewModel;
     SignInButton signInbtn;
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 123;

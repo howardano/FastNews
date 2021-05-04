@@ -1,4 +1,4 @@
-package ru.mail.park.fastnews;
+package ru.mail.park.fastnews.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,6 +20,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import ru.mail.park.fastnews.models.Articles;
+import ru.mail.park.fastnews.R;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
@@ -49,7 +52,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         String imageUrl = a.getUrlToImage();
 
         Picasso.with(context).load(imageUrl).into(holder.imageView);
-
     }
 
     @Override
@@ -79,7 +81,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         PrettyTime prettyTime = new PrettyTime(new Locale(getCountry()));
         String time = null;
         try {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:",Locale.ENGLISH);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:",Locale.ENGLISH);
             Date date = simpleDateFormat.parse(t);
             time = prettyTime.format(date);
         }catch (ParseException e) {

@@ -1,9 +1,11 @@
-package ru.mail.park.fastnews;
+package ru.mail.park.fastnews.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+
+import ru.mail.park.fastnews.models.Articles;
 
 public class Headlines {
 

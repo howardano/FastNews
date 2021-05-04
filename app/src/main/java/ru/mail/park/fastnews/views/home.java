@@ -18,10 +18,10 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import ru.mail.park.fastnews.Adapter;
+import ru.mail.park.fastnews.adapters.Adapter;
 import ru.mail.park.fastnews.ApiClient;
-import ru.mail.park.fastnews.Articles;
-import ru.mail.park.fastnews.Headlines;
+import ru.mail.park.fastnews.models.Articles;
+import ru.mail.park.fastnews.models.Headlines;
 import ru.mail.park.fastnews.R;
 
 /**
