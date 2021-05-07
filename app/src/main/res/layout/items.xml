@@ -13,6 +13,8 @@
         app:cardElevation="4dp"
         app:cardCornerRadius="6dp">
 
+
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">
@@ -41,10 +43,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TITLE"
+                android:fontFamily="@font/amethysta"
                 android:padding="10dp"
-                android:textSize="22dp"
-                android:textColor="@color/white"
+                android:textColor="@color/cadetDark"
                 android:id="@+id/tvTitle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="10dp"
+                android:text="Ticker"
+                android:fontFamily="@font/amethysta"
+                android:textSize="20dp"
+                android:id="@+id/tvTicker"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,7 +70,8 @@
                     android:layout_height="wrap_content"
                     android:text="Source"
                     android:textSize="15dp"
-                    android:textColor="@color/mintDark"
+                    android:fontFamily="@font/amethysta"
+                    android:textColor="@color/cadetDark"
                     android:id="@+id/tvSource"/>
 
                 <TextView
@@ -66,8 +79,9 @@
                     android:layout_height="wrap_content"
                     android:text="5 hour ago"
                     android:gravity="right"
+                    android:fontFamily="@font/amethysta"
                     android:textSize="15dp"
-                    android:textColor="@color/mintDark"
+                    android:textColor="@color/cadetDark"
                     android:id="@+id/tvDate"/>
             </LinearLayout>
         </FrameLayout>

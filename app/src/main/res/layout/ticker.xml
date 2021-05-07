@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="50dp"
+    android:elevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">\
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tickerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        >
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tyal_200_background">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tickerText"
+                android:text="Tickername"
+                android:textSize="20dp"
+                android:fontFamily="@font/amethysta"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/tickerClose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:background="@color/teal200"
+                android:src="@drawable/close_icon_white"/>
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

@@ -6,5 +6,6 @@
     <string name="settings_fragment">Settings</string>
     <string name="log_out">log out</string>
     <string name="textview">TextView</string>
+    <string name="tab">CustomTab</string>
 <!--    <string name="textview">TextView</string>-->
 </resources>

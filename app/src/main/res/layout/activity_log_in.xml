@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.LogInActivity"
+    tools:context=".RegisterActivity"
     android:background="@color/mintCream">
 
     <ImageView
@@ -27,6 +27,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="Input Email"
+        android:fontFamily="@font/amethysta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,18 +38,18 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="276dp"
-        android:background="@drawable/login_dark"
+        android:background="@color/teal200"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textStyle="bold"
+        android:text="Log In"
+        android:textSize="20dp"
+        android:fontFamily="@font/amethysta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -60,5 +61,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Input Password" />
+        android:hint="Input Password"
+        android:fontFamily="@font/amethysta"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
